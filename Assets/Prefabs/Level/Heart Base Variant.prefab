@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2164788707438545692, guid: f9aab9c257534014caa57b2577f6ae4c, type: 3}
       propertyPath: onTakeCoin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: RaiseEvent
       objectReference: {fileID: 0}
     - target: {fileID: 2164788707438545692, guid: f9aab9c257534014caa57b2577f6ae4c, type: 3}
       propertyPath: onTakeCoin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
