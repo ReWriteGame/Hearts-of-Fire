@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SlotsIcon", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Icon", order = 1)]
 public class SpawnerData : ScriptableObject
 {
     [SerializeField] private List<GameObject> prefabs;

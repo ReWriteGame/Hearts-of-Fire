@@ -1,8 +1,10 @@
 using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
+using System.Collections;
 
-public class Admob : MonoBehaviour
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Admob", order = 1)]
+public class Admob : ScriptableObject
 {
 	private InterstitialAd interstitial;
 	private BannerView banner;
@@ -10,6 +12,7 @@ public class Admob : MonoBehaviour
 	[SerializeField] private string interstitialId;
 	[SerializeField] private string bannerId;
 	[SerializeField] private bool isBannerEnabled = false;
+	[Range(0, 20), SerializeField] private int showFrequencyAds = 10;
 	private void Start()
 	{
 		MobileAds.Initialize(init =>{});
@@ -84,4 +87,14 @@ public class Admob : MonoBehaviour
 	{
 		//GameStateController.showAd -= RequestInterstitialAd;
 	}
+
+    public void showRandomAds()
+    {
+        if (UnityEngine.Random.Range(0, showFrequencyAds) == 0)
+        {
+            RequestInterstitialAd();
+            if (interstitial.IsLoaded())
+                interstitial.Show();
+        }
+    }
 }
